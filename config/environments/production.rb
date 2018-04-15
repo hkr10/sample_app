@@ -59,11 +59,11 @@ Rails.application.configure do
 
   # Use a real queuing backend for Active Job (and separate queues per environment)
   # config.active_job.queue_adapter     = :resque
-  # config.active_job.queue_name_prefix = "sample_app_#{Rails.env}"
+  #config.active_job.queue_name_prefix = "sample_app_#{Rails.env}"
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   host = '<your heroku app>.herokuapp.com'
-  config.action_mailer.default_url_options = { host: calm-falls-71516 }
+  config.action_mailer.default_url_options = { host: host }
   ActionMailer::Base.smtp_settings = {
     :address        => 'smtp.sendgrid.net',
     :port           => '587',
